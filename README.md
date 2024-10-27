@@ -1,5 +1,7 @@
 # Tabbed Interface with Custom Caching and State Management
 
+![Tabbed Interface](./src//assets/image.png)
+
 ## Project Overview
 
 This project is a tabbed interface application that displays different data based on the selected tab. It is built with **React** and uses a **custom data provider** to handle **caching** and **state management**, in line with the requirements of a job assignment.
@@ -10,6 +12,7 @@ The custom data provider solution is designed to cache fetched data, manage stat
 
 - **Custom Caching**: Data fetched for each tab is stored in a cache to avoid redundant network requests and improve performance.
 - **State Management with Custom Data Provider**: Global state and cache management are handled through a custom provider, making data accessible across components.
+- **Use the search param to manage the active tab state**:Used `useSearchParams` hook form `react-router-dom` so that the tabs function based on the URL's search parameters, enabling easy sharing and bookmarking of specific tabs!.
 - **Dynamic Data Loading**: Data is fetched only when a tab is clicked, minimizing initial load times and enhancing user experience.
 - **JSONPlaceholder Dummy API**: Due to CORS issues with the provided loripsum.net API, the JSONPlaceholder API was used as a replacement to fetch mock data.
 
@@ -58,11 +61,10 @@ Using a custom caching solution ensures that the project aligns with the assignm
 
 ## Code Explanation
 
-`tab_data_provider.tsx`
-`useFetchWithCache`: This custom hook handles fetching and caching for each tab. It first checks if data is cached and still valid before making a network request. If not, it will fetch new data, cache it, and handle retry logic in case of network errors.
+**`useFetchWithCache`**: This custom hook handles fetching and caching for each tab. It first checks if data is cached and still valid before making a network request. If not, it will fetch new data, cache it, and handle retry logic in case of network errors.
 
-`use_custom_cache`
+**`use_custom_cache`**:
 This custom hook is designed to use the `useFetchWithCache`for data fetching with caching for a specific tabId and it also handles the loading and error state. This hook can be used in any component that needs to fetch tabData with caching by providing a tabId.
 
-`tab.tsx`
+**`tab.tsx`**:
 This component renders the tabbed interface. When a tab is clicked, it uses useFetchWithCache to fetch data for that tab, showing a loading state, cached data, or error messages depending on the fetch status.
