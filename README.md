@@ -8,6 +8,8 @@ This project is a tabbed interface application that displays different data base
 
 The custom data provider solution is designed to cache fetched data, manage state, and implement cache expiration without relying on external libraries like React Query.
 
+For this project, **custom caching and state management** were implemented instead of using **`React Query`** because of the simplicity of the project i did not want to install an entire library.
+
 ## Features
 
 - **Custom Caching**: Data fetched for each tab is stored in a cache to avoid redundant network requests and improve performance.
@@ -68,3 +70,6 @@ This custom hook is designed to use the `useFetchWithCache`for data fetching wit
 
 **`tab.tsx`**:
 This component renders the tabbed interface. When a tab is clicked, it uses useFetchWithCache to fetch data for that tab, showing a loading state, cached data, or error messages depending on the fetch status.
+
+**`fetchWithCache`**:
+A fetcher function to manage cache with invalidation and retry logic.
