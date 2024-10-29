@@ -6,9 +6,7 @@
 
 This project is a tabbed interface application that displays different data based on the selected tab. It is built with **React** and uses a **custom data provider** to handle **caching** and **state management**, in line with the requirements of a job assignment.
 
-The custom data provider solution is designed to cache fetched data, manage state, and implement cache expiration without relying on external libraries like React Query.
-
-For this project, **custom caching and state management** were implemented instead of using **`React Query`** because of the simplicity of the project i did not want to install an entire library.
+Eventhough for best performance and best caching logic using a library like **`React Query`** is optimal, for this project, **custom caching and state management** were implemented instead, because of the simplicity of the project.
 
 ## Features
 
