@@ -57,6 +57,11 @@ Using a custom caching solution ensures that the project aligns with the assignm
    ```
 4. **Open your browser and navigate to: http://localhost:3000**
 
+5. **to run the test**:
+   ```bash
+   npm run test
+   ```
+
 ## Usage
 
 1. **Tab Navigation**: Click on any tab to load the content for that tab.

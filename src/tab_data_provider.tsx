@@ -68,7 +68,7 @@ const useFetchWithCache = () => {
     []
   );
 
-  return { fetchWithCache, tabData };
+  return { fetchWithCache, tabData, setData };
 };
 
 export default useFetchWithCache;
