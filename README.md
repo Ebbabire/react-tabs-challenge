@@ -8,6 +8,10 @@ This project is a tabbed interface application that displays different data base
 
 Eventhough for best performance and best caching logic using a library like **`React Query`** is optimal, for this project, **custom caching and state management** were implemented instead, because of the simplicity of the project.
 
+## Challenge
+
+The main difficulty I faced was related to the provided REST API (`https://loripsum.net/`), which had a CORS issue that prevented me from accessing it directly. To work around this, I used the JSONPlaceholder API as a mock data source to ensure that the project functioned correctly while simulating similar data fetching needs. Other than this API limitation, the challenge was straightforward, and I was able to implement the required functionality without any other significant issues.
+
 ## Features
 
 - **Custom Caching**: Data fetched for each tab is stored in a cache to avoid redundant network requests and improve performance.
