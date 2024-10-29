@@ -11,7 +11,7 @@ import TabLoading from "../components/tab_loading";
 vi.mock("../hooks/use_custome_cache");
 
 describe("Tab Component", () => {
-  test("renders default tab (Tab 1) when it first renders", () => {
+  test("renders default tab (Tab 1) when no search param is passed", () => {
     // Mock the `useCustomCache` hook to avoid unnecessary dependencies
     (useCustomCache as ReturnType<typeof vi.fn>).mockReturnValue({
       tabData: {},
