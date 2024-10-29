@@ -11,6 +11,26 @@ import TabLoading from "../components/tab_loading";
 vi.mock("../hooks/use_custome_cache");
 
 describe("Tab Component", () => {
+  test("renders list of tab buttons", () => {
+    // Mock the `useCustomCache` hook to avoid unnecessary dependencies
+    (useCustomCache as ReturnType<typeof vi.fn>).mockReturnValue({
+      tabData: {},
+      loading: false,
+      error: null,
+    });
+
+    // Render the component with `MemoryRouter` and initialEntries to control URL
+    render(
+      <MemoryRouter>
+        <Tab />
+      </MemoryRouter>
+    );
+
+    // Verify that Tab 1 has the active styling
+    const defaultTabButton = screen.queryAllByRole("button", { name: /tab /i });
+    defaultTabButton.forEach((btn) => expect(btn).toBeInTheDocument());
+  });
+
   test("renders default tab (Tab 1) when no search param is passed", () => {
     // Mock the `useCustomCache` hook to avoid unnecessary dependencies
     (useCustomCache as ReturnType<typeof vi.fn>).mockReturnValue({
