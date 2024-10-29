@@ -6,7 +6,7 @@
 
 This project is a tabbed interface application that displays different data based on the selected tab. It is built with **React** and uses a **custom data provider** to handle **caching** and **state management**, in line with the requirements of a job assignment.
 
-Eventhough for best performance and best caching logic using a library like **`React Query`** is optimal, for this project, **custom caching and state management** were implemented instead, because of the simplicity of the project.
+## Eventhough for best performance and best caching logic using a library like **`React Query`** is optimal, for this project, **custom caching and state management** were implemented instead, because of the simplicity of the project.
 
 ## Challenge
 
