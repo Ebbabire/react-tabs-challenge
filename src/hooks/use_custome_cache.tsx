@@ -10,6 +10,7 @@ const useCustomCache = (tabId: string) => {
 
   useEffect(() => {
     const fetchData = async () => {
+      setError("");
       try {
         setLoading(true);
         await fetchWithCache(tabId);
