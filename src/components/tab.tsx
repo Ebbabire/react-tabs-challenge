@@ -14,7 +14,6 @@ const Tab = () => {
     { id: "3", label: "Tab 3" },
     { id: "4", label: "Tab 4" },
   ];
-  console.log(error);
   return (
     <div className="container mx-auto w-[50%] flex gap-12 flex-col bg-white">
       {/* Tab Navigation */}
